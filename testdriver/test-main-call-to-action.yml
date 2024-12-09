@@ -1,0 +1,14 @@
+version: 4.1.29
+steps:
+  - prompt: Find and click on the main call to action button "TALK TO US".
+    commands:
+      - command: hover-text
+        text: TALK TO US
+        description: main call to action button on the webpage
+        action: click
+  - prompt: >-
+      Assert that the corresponding page or section loads correctly.  # Use the
+      content of the file from the environment
+    commands:
+      - command: assert
+        expect: Bring Albert to your school or district
