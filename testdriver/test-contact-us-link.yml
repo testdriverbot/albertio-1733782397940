@@ -1,0 +1,28 @@
+version: 4.1.29
+steps:
+  - prompt: Focus the browser window.
+    commands: []
+  - prompt: Find and click on the "Help Center" link.
+    commands:
+      - command: hover-text
+        text: Help Center
+        description: link in the top navigation bar
+        action: click
+  - prompt: >-
+      Assert that the contact page loads and displays the correct content.  #
+      Use the content of the file from the environment
+    commands:
+      - command: assert
+        expect: Advice and answers from the Albert Team
+  - prompt: >-
+      Assert that the contact page loads and displays the correct content.  #
+      Use the content of the file from the environment
+    commands:
+      - command: assert
+        expect: Advice and answers from the Albert Team is visible on the page
+  - prompt: >-
+      Assert that the contact page loads and displays the correct content.  #
+      Use the content of the file from the environment
+    commands:
+      - command: assert
+        expect: Advice and answers from the Albert Team is visible on the page
