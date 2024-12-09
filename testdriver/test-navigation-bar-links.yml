@@ -1,0 +1,34 @@
+version: 4.1.29
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: 'Click on each navigation link: "Explore", "Library", "Pricing", "Log In".'
+    commands:
+      - command: hover-text
+        text: Explore
+        description: navigation link for Explore
+        action: click
+      - command: hover-text
+        text: Library
+        description: navigation link for Library
+        action: click
+      - command: hover-text
+        text: Pricing
+        description: navigation link for Pricing
+        action: click
+      - command: hover-text
+        text: Log In
+        description: navigation link for Log In
+        action: click
+  - prompt: >-
+      Assert that each link navigates to the correct page without errors.  # Use
+      the content of the file from the environment
+    commands:
+      - command: hover-text
+        text: Explore
+        description: navigation link for Explore
+        action: click
+      - command: assert
+        expect: Explore page content is visible
